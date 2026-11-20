@@ -1,58 +1,78 @@
+// Contact form for The Tattoo Co.
+// Builds the form with JavaScript (the point of the original assignment),
+// then checks the fields in the browser. This is a demo site, so nothing is sent.
 
-// Fetching HTML Elements in Variables by ID.
-var x = document.getElementById("form_sample");
-var createform = document.createElement('form'); // Create New Element Form
-createform.setAttribute("action", ""); // Setting Action Attribute on Form
-createform.setAttribute("method", "post"); // Setting Method Attribute on Form
-x.appendChild(createform);
+(function () {
+	var container = document.getElementById("form_sample");
+	if (!container) return;
 
-var heading = document.createElement('h2'); // Heading of Form
-heading.innerHTML = "Contact Form ";
-createform.appendChild(heading);
+	var form = document.createElement("form");
+	form.setAttribute("novalidate", "");
 
-var line = document.createElement('hr'); // Giving Horizontal Row After Heading
-createform.appendChild(line);
+	var heading = document.createElement("h2");
+	heading.textContent = "Contact Form";
+	form.appendChild(heading);
+	form.appendChild(document.createElement("hr"));
 
-var linebreak = document.createElement('br');
-createform.appendChild(linebreak);
+	// Adds a label and a field, linked by id so screen readers announce them together.
+	function addField(id, labelText, tag, attrs) {
+		var label = document.createElement("label");
+		label.setAttribute("for", id);
+		label.textContent = labelText;
 
-var namelabel = document.createElement('label'); // Create Label for Name Field
-namelabel.innerHTML = "Your Name : "; // Set Field Labels
-createform.appendChild(namelabel);
+		var field = document.createElement(tag);
+		field.id = id;
+		field.name = id;
+		field.required = true;
+		Object.keys(attrs).forEach(function (key) {
+			field.setAttribute(key, attrs[key]);
+		});
 
-var inputelement = document.createElement('input'); // Create Input Field for Name
-inputelement.setAttribute("type", "text");
-inputelement.setAttribute("name", "dname");
-createform.appendChild(inputelement);
+		form.appendChild(label);
+		form.appendChild(field);
+		return field;
+	}
 
-var linebreak = document.createElement('br');
-createform.appendChild(linebreak);
+	var nameField = addField("name", "Your name", "input", { type: "text", autocomplete: "name" });
+	var emailField = addField("email", "Your email", "input", { type: "email", autocomplete: "email" });
+	var messageField = addField("message", "Your message", "textarea", { rows: "5" });
 
-var emaillabel = document.createElement('label'); // Create Label for E-mail Field
-emaillabel.innerHTML = "Your Email : ";
-createform.appendChild(emaillabel);
+	var submit = document.createElement("button");
+	submit.type = "submit";
+	submit.textContent = "Send message";
+	form.appendChild(submit);
 
-var emailelement = document.createElement('input'); // Create Input Field for E-mail
-emailelement.setAttribute("type", "text");
-emailelement.setAttribute("name", "demail");
-createform.appendChild(emailelement);
+	var note = document.createElement("p");
+	note.className = "form-note";
+	note.textContent = "This is a student project, so messages aren't actually sent.";
+	form.appendChild(note);
 
-var emailbreak = document.createElement('br');
-createform.appendChild(emailbreak);
+	var status = document.createElement("p");
+	status.className = "form-status";
+	status.setAttribute("role", "status");
+	status.hidden = true;
+	form.appendChild(status);
 
-var messagelabel = document.createElement('label'); // Append Textarea
-messagelabel.innerHTML = "Your Message : ";
-createform.appendChild(messagelabel);
+	form.addEventListener("submit", function (event) {
+		event.preventDefault();
 
-var texareaelement = document.createElement('textarea');
-texareaelement.setAttribute("name", "dmessage");
-createform.appendChild(texareaelement);
+		var fields = [nameField, emailField, messageField];
+		for (var i = 0; i < fields.length; i++) {
+			if (!fields[i].checkValidity()) {
+				status.textContent = fields[i] === emailField && fields[i].value.trim()
+					? "Please enter a valid email address."
+					: "Please fill in your " + fields[i].name + ".";
+				status.hidden = false;
+				fields[i].focus();
+				return;
+			}
+		}
 
-var messagebreak = document.createElement('br');
-createform.appendChild(messagebreak);
+		status.textContent = "Thanks, " + nameField.value.trim() +
+			"! Since this is a demo site, your message wasn't sent anywhere.";
+		status.hidden = false;
+		form.reset();
+	});
 
-var submitelement = document.createElement('input'); // Append Submit Button
-submitelement.setAttribute("type", "submit");
-submitelement.setAttribute("name", "dsubmit");
-submitelement.setAttribute("value", "Submit");
-createform.appendChild(submitelement);
+	container.appendChild(form);
+})();
