@@ -1,89 +1,76 @@
-<!--https://app-itc2400-37.azurewebsites.net/Home.html-->
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> The Tattoo Co. : Home</title>
-  <link rel="stylesheet" href="stylesheets/home.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home · The Tattoo Co.</title>
+  <meta name="description" content="The Tattoo Co. is a college HTML5 and CSS3 project: a website for a hypothetical minimalist tattoo studio.">
+  <link rel="stylesheet" href="stylesheets/site.css">
 </head>
 
 <body>
-  <!-- Main Container -->
   <div class="container">
-    <!-- Header -->
     <header class="header">
-      <h4 class="logo">The Tattoo Co.</h4>
+      <p class="logo"><a href="Home.html">The Tattoo Co.</a></p>
     </header>
-    <nav>
+    <nav aria-label="Main">
       <ul>
-        <li><a href="Home.html"> Home </a> </li>
-        <li><a href="Ourwork.html">Our Work</a> </li>
-        <li> <a href="TheProcess.html">The Process </a> </li>
-        <li><a href="ContactUs.html"> Contact Us</a> </li>
+        <li><a href="Home.html" aria-current="page">Home</a></li>
+        <li><a href="Ourwork.html">Our Work</a></li>
+        <li><a href="TheProcess.html">The Process</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
       </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="intro">
-      <div class="column">
-        <h3>About Us &nbsp;</h3>
-      </div>
-      <div class="column">
-        <div style="background-color:#191717; text-align:center;padding:20px 40px;">
-
-          <p> Established in 2010, we are the tattoo company.
-            We specialize in line and minimalistic tattoo designs.
-            We offer both black and white and colored designs.
-            We are located in the heart of Boston. We are pretty
-            much accessible from all subways, buses as well as the
-            commuter rail and are located amongst many restaurants,
-            cafeterias, etc.</p>
-          <p>We have been a customer favorite for a very long time,
-            especially because we're one of the first shops to ever
-            offer minimalist designs exclusively. We use very safe tools
-            and customer sanitation is our top priority.</p>
+    <main>
+      <section class="intro" aria-labelledby="about">
+        <h2 id="about">About Us</h2>
+        <div class="intro-text">
+          <p>Established in 2010, we are The Tattoo Co. We specialize in line and minimalist tattoo designs,
+            in both black and white and color. We are located in the heart of Boston, easy to reach by subway,
+            bus and commuter rail, among plenty of restaurants and cafes.</p>
+          <p>We have been a customer favorite for a long time, especially because we were one of the first shops
+            to offer minimalist designs exclusively. We use very safe tools, and customer sanitation is our top
+            priority.</p>
         </div>
-      </div>
-    </section>
-    <!-- Stats Gallery Section -->
-    <div class="gallery">
+      </section>
 
-      <h2 style="padding-top: 1em;"> FEAUTURED DESIGNS</h2>
+      <section class="section" aria-labelledby="featured">
+        <h2 id="featured">Featured Designs</h2>
+        <ul class="cards">
+          <li><figure class="card">
+            <img src="images/ByebyeBirdy.jpg" width="667" height="1000" loading="lazy"
+              alt="Three small black birds tattooed on a wrist, the hand reaching up to a blossoming branch">
+            <figcaption>Bye Bye Birdy</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/TheRose.jpg" width="751" height="1000" loading="lazy"
+              alt="A raised hand holding a red rose against a black background, a fine-line tattoo on the wrist">
+            <figcaption>The Rose</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/Wings.jpg" width="790" height="730" loading="lazy"
+              alt="A small pair of wings tattooed between the shoulder blades of a person with red hair">
+            <figcaption>Wings</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/Myuniverse.jpg" width="667" height="1000" loading="lazy"
+              alt="A geometric diamond tattoo framing a starry landscape on a forearm">
+            <figcaption>My Universe</figcaption>
+          </figure></li>
+        </ul>
+      </section>
+    </main>
 
-      <div class="thumbnail"> <img src="images/ ByebyeBirdy.jpg" alt="Bye Bye Birdie" width=3648 height="5472"
-          class="cards">
-        <h4> Bye Bye Birdy </h4>
-
-      </div>
-      <div class="thumbnail"> <img src="images/The Rose.jpg" alt="The Rose" width="3448" class="cards">
-        <h4>The Rose</h4>
-
-      </div>
-      <div class="thumbnail"> <a href="#"><img src="images/Wings.jpg" alt="Wings" width="5975" class="cards" /></a>
-        <h4>Wings</h4>
-      </div>
-
-      <div class="thumbnail"> <a href="#"><img src="images/Myuniverse.jpg" alt="My Universe" width="3744"
-            class="cards" /></a>
-        <h4>My Universe</h4>
-
-      </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer id="contact">
+    <footer>
       <p class="hero_header">GET IN TOUCH WITH US</p>
-      <div class="button">
-        <a href="mailto:xyz@gmail.com">EMAIL US </a>
-      </div>
+      <a class="button" href="mailto:hello@example.com">Email us</a>
     </footer>
-    <!-- Copyrights Section -->
-    <div class="copyright">&copy;2022 - <strong>The Tattoo Co.</strong></div>
+    <div class="copyright">&copy; 2022 <strong>The Tattoo Co.</strong>
+      <small>A college HTML5 &amp; CSS3 project for a hypothetical studio.</small>
+    </div>
   </div>
-  <!-- Main Container Ends -->
 </body>
 
 </html>

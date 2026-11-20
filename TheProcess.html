@@ -1,111 +1,103 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> The Tattoo Co.: Our Work</title>
-  <link rel="stylesheet" href="stylesheets/theprocess.css">
+  <title>The Process · The Tattoo Co.</title>
+  <meta name="description" content="The Tattoo Co. is a college HTML5 and CSS3 project: a website for a hypothetical minimalist tattoo studio.">
+  <link rel="stylesheet" href="stylesheets/site.css">
 </head>
 
 <body>
-  <!-- Main Container -->
   <div class="container">
-    <!-- Header -->
-
     <header class="header">
-      <h4 class="logo">The Tattoo Co.</h4>
+      <p class="logo"><a href="Home.html">The Tattoo Co.</a></p>
     </header>
-    <nav>
+    <nav aria-label="Main">
       <ul>
-        <li><a href="Home.html"> Home </a> </li>
-        <li><a href="Ourwork.html">Our Work</a> </li>
-        <li> <a href="TheProcess.html">The Process </a> </li>
-        <li><a href="ContactUs.html"> Contact Us</a> </li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Ourwork.html">Our Work</a></li>
+        <li><a href="TheProcess.html" aria-current="page">The Process</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
       </ul>
     </nav>
 
-    <div class="gallery">
-      <!--divs for different aspects of the process-->
-      <h2 style="padding-left: 2em ">Equipment Used</h2>
-      <div class="row">
-        <div class="w50 textbox-1">
-          <h4 style="text-align:center ;">Tattoo Gun</h4>
-          <p> We use wireless tattoo machines to provide the best service possible.
-            The chances of making a small error are almost negligible as there is no wire pull.
-            We use, FK Irons Flux, Critical X Bishop Power Wands, Cheyenne Sol Nova Unlimited just
-            to name a few. These machines also have a run time of almost 10 hours and hands can be
-            used for an entire workday. </p>
-        </div>
-        <div class="w50 object-fit"><a href="#"> <img src="images/tattoogun.jpg" alt="Tattoo Gun" width="100%"> </a>
-        </div>
-      </div>
+    <main>
+      <section class="section" aria-labelledby="equipment">
+        <h2 id="equipment">Equipment We Use</h2>
+        <div class="process">
+          <article class="step">
+            <div class="step-text">
+              <h3>Tattoo Machines</h3>
+              <p>We use wireless tattoo machines to provide the best service possible. With no cord pulling on
+                the artist's hand, the chance of a small error is almost negligible. We use the FK Irons Flux,
+                Critical X Bishop Power Wands and Cheyenne Sol Nova Unlimited, to name a few. These machines run
+                for almost 10 hours, so one can last an entire workday.</p>
+            </div>
+            <img src="images/tattoogun.jpg" width="1067" height="1600" loading="lazy"
+              alt="A tattoo artist in black gloves working on a client's arm with a tattoo machine">
+          </article>
 
-      <div class="row">
-        <div class="w50 textbox-1">
-          <h4 style="text-align:center ;">Nitrile Gloves</h4>
-          <p> This may sound gross, but tattooing itself is the process of creating an open wound which becomes a
-            tattoo.
-            And hence cleanliness has to be at its peak and any bacteria, virusess etc. need to be removed. The first
-            step
-            other than having a clean workspace is the usage of gloves to maintain sanitation. While Latex Gloves, or a
-            good and feasible option there are a lot of people with latex allergy and with in long-term use, can also
-            cause
-            allergy and other skin issues to the artist. To avoid this we use nitrile gloves, they give you the freedom
-            to
-            move and provide exact designs without compromising safety.</p>
-        </div>
-        <div class="w50 object-fit"><a href="#"> <img src="images/gloves.jpg" alt="Nitrile Gloves" width="100%"> </a>
-        </div>
-      </div>
+          <article class="step">
+            <div class="step-text">
+              <h3>Nitrile Gloves</h3>
+              <p>This may sound gross, but tattooing creates an open wound that heals into a tattoo, so
+                cleanliness has to be at its peak and bacteria and viruses kept away. After a clean workspace,
+                the first step is wearing gloves. Latex gloves are a good, affordable option, but many people
+                are allergic to latex, and long-term use can cause allergies and other skin issues for the
+                artist. So we use nitrile gloves: they give artists the freedom to move and draw exact designs
+                without compromising safety.</p>
+            </div>
+            <img src="images/gloves.jpg" width="1600" height="1067" loading="lazy"
+              alt="Two gloved fists bumping against a dark background">
+          </article>
 
-      <div class="row">
-        <div class="w50 textbox-1">
-          <h4 style="text-align:center ;">Inks</h4>
-          <p> We do both black and white and color tattoos and so we make sure that we select the best ink for it to
-            not fade for the longest time possible and so that our tattoos come out as vibrant as possible.
-            We use brands like Eternal ink, World Famous ink, Silverback ink among many to make sure thw
-            customer returns happy with the small piece of art on their body.</p>
+          <article class="step">
+            <div class="step-text">
+              <h3>Inks</h3>
+              <p>We do both black and white and color tattoos, so we choose inks that resist fading for as long
+                as possible and come out as vibrant as possible. We use brands like Eternal Ink, World Famous Ink
+                and Silverback Ink, among others, so every customer leaves happy with the small piece of art on
+                their body.</p>
+            </div>
+            <img src="images/ink.jpg" width="1600" height="1067" loading="lazy"
+              alt="A black and white photo of a crate full of ink bottles">
+          </article>
+
+          <article class="step">
+            <div class="step-text">
+              <h3>Numbing Cream</h3>
+              <p>Pain is one of the biggest reasons people are scared of getting a tattoo, even when they really
+                want one. Here at The Tattoo Co. we try our best not to let fear get in the way, so we keep
+                numbing creams on hand: Dr. Numb 5%, BCOT Pain Reducing Numbing Cream and TAONMEISU Numbing Cream
+                are some you'll find on our shelves.</p>
+            </div>
+            <img src="images/numbingcream.jpg" width="1256" height="1600" loading="lazy"
+              alt="A dab of cream being rubbed into the back of a hand">
+          </article>
         </div>
-        <div class="w50 object-fit"><a href="#"> <img src="images/ink.jpg" alt="Ink" width="100%"> </a></div>
-      </div>
 
-      <div class="row">
-        <div class="w50 textbox-1">
-          <h4 style="text-align:center ;">Numbing Cream</h4>
-          <p> Pain is one of the biggest reasons why people are scared of getting tattoos, even if they really want one.
-            Here at The Tattoo Co. we try our best to not let fear come in the way. We keep a number of
-            creams handy for the same purpose Creams like Dr. Numb 5%, BCOT Pain Reducing Numbing Cream, TAONMEISU
-            Numbing Cream
-            are some common creams that can be found in our shelves. </p>
+        <div class="process-note">
+          <h2>Cleaning and Sanitation</h2>
+          <p>Cleaning and sanitation are of the utmost importance to us. We aim for a level of sanitation
+            comparable to a hospital room. Customer safety comes first, so keeping our tools, spaces and people
+            clean has been, and will always be, our top priority. Our artists wash their hands thoroughly, and we
+            check for any cuts or open wounds so there is no bacterial transmission. At any sign of discomfort to
+            either the artist or the customer, we stop. At the end of the day, all we want is for our customers
+            to leave with happy memories and a good experience.</p>
         </div>
-        <div class="w50 object-fit"><a href="#"> <img src="images/numbingcream.jpg" alt="Numbimg Cream" width="100%">
-          </a></div>
-      </div>
+      </section>
+    </main>
 
-      <h2 style="padding-left: 2em; "> Cleaning and Sanitation</h2>
-      <p style="padding-left: 2em; padding-right: 1em;">Cleaning and sanitation are of the utmost importance to us.
-        we strive to achieve the highest level of sanitation. Which can be comparative to that of
-        hospital rooms. we put customer safety at the top and so ensuring our tools, spaces and
-        personnel are claean has been and will always be our top priority. We make sure our artists wash
-        hands thoroughly. We inspect for any cuts or open bruises to ensure their is no bacterial transmission.
-        At any sign of discomfort to either the artisr or the customer. at the end of he day, all we want is our
-        customers to go back with happy memories and a good experience. </p>
-    </div>
-
-    <!-- Footer Section -->
-    <footer id="contact">
+    <footer>
       <p class="hero_header">GET IN TOUCH WITH US</p>
-      <div class="button">
-        <a href="mailto:xyz@gmail.com">EMAIL US </a>
-      </div>
+      <a class="button" href="mailto:hello@example.com">Email us</a>
     </footer>
-    <!-- Copyrights Section -->
-    <div class="copyright">&copy;2022 - <strong>The Tattoo Co.</strong></div>
+    <div class="copyright">&copy; 2022 <strong>The Tattoo Co.</strong>
+      <small>A college HTML5 &amp; CSS3 project for a hypothetical studio.</small>
+    </div>
   </div>
-  </div>
-  <!-- Main Container Ends -->
 </body>
 
 </html>

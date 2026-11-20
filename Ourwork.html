@@ -1,79 +1,84 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> The Tattoo Co.: Our Woek</title>
-  <link rel="stylesheet" href="stylesheets/ourwork.css">
+  <title>Our Work · The Tattoo Co.</title>
+  <meta name="description" content="The Tattoo Co. is a college HTML5 and CSS3 project: a website for a hypothetical minimalist tattoo studio.">
+  <link rel="stylesheet" href="stylesheets/site.css">
 </head>
 
 <body>
-  <!-- Main Container -->
   <div class="container">
-    <!-- Header -->
-
     <header class="header">
-      <h4 class="logo">The Tattoo Co.</h4>
+      <p class="logo"><a href="Home.html">The Tattoo Co.</a></p>
     </header>
-    <nav>
+    <nav aria-label="Main">
       <ul>
-        <li><a href="Home.html"> Home </a> </li>
-        <li><a href="Ourwork.html">Our Work</a> </li>
-        <li> <a href="TheProcess.html">The Process </a> </li>
-        <li><a href="ContactUs.html"> Contact Us</a> </li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Ourwork.html" aria-current="page">Our Work</a></li>
+        <li><a href="TheProcess.html">The Process</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
       </ul>
     </nav>
 
-    <!-- Stats Gallery Section -->
+    <main>
+      <section class="section" aria-labelledby="work">
+        <h2 id="work">Our Work</h2>
+        <ul class="cards">
+          <li><figure class="card">
+            <img src="images/NYC.jpg" width="667" height="1000" loading="lazy"
+              alt="A fine-line New York skyline in a small square on an inner forearm, beside a bunch of dried flowers">
+            <figcaption>New York State of Mind</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/Love.jpg" width="1000" height="999" loading="lazy"
+              alt="A script tattoo ending in the word 'Love' on the back of an upper arm">
+            <figcaption>Remedy</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/Leafmealone.jpg" width="750" height="1000" loading="lazy"
+              alt="A thin leafy vine around a wrist and a small block of text on the inner arm">
+            <figcaption>Leaf Me Alone</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/Music.jpg" width="958" height="1000" loading="lazy"
+              alt="The word 'music' in delicate handwritten script on a shoulder">
+            <figcaption>Music</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/Dest.jpg" width="750" height="1000" loading="lazy"
+              alt="A long compass needle tattoo with a mountain triangle along the inner forearm">
+            <figcaption>Destination</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/Paperplane.jpg" width="963" height="1000" loading="lazy"
+              alt="A tiny paper plane with a dotted flight path on the side of a hand">
+            <figcaption>Paper Plane</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/Suntomymoon.jpg" width="667" height="1000" loading="lazy"
+              alt="Matching tiny sun and crescent moon tattoos on two people's forearms side by side">
+            <figcaption>Sun To My Moon</figcaption>
+          </figure></li>
+          <li><figure class="card">
+            <img src="images/Sea.jpg" width="750" height="1000" loading="lazy"
+              alt="A round colorful sunset-over-the-sea tattoo on an arm reaching toward the ocean">
+            <figcaption>Seahorn</figcaption>
+          </figure></li>
+        </ul>
+      </section>
+    </main>
 
-    <div class="gallery">
-
-      <h2 style="padding-top: 1em;;">Our Work</h2>
-
-      <div class="thumbnail"> <a href="#">
-          <img src="images/NYC.jpg" alt="New York State of Mind" width="2000" class="cards" /></a>
-        <h4>New York State of Mind</h4>
-      </div>
-      <div class="thumbnail"> <a href="#"><img src="images/Love.jpg" alt="Remedy" width="2000" class="cards" /></a>
-        <h4>Remedy</h4>
-      </div>
-      <div class="thumbnail"> <a href="#">
-          <img src="images/Leafmealone.jpg" alt="Leaf Me Alone" width="2000" class="cards" /></a>
-        <h4>Leaf Me Alone</h4>
-      </div>
-      <div class="thumbnail"> <a href="#"><img src="images/Music.jpg" alt="music" width="2000" class="cards"></a>
-        <h4>Music</h4>
-      </div>
-    </div>
-    <div class="gallery">
-      <div class="thumbnail"> <a href="#"><img src="images/Dest.jpg" alt="Destination" width="2000" class="cards" /></a>
-        <h4>Destination</h4>
-      </div>
-      <div class="thumbnail"> <a href="#"><img src="images/Paperplane.jpg" alt="Paper Plane" width="2000"
-            class="cards" /></a>
-        <h4>Paper Plane</h4>
-      </div>
-      <div class="thumbnail"> <a href="#"><img src="images/Suntomymoon.jpg" alt="Sun To My Moon" width="2000"
-            class="cards" /></a>
-        <h4>Sun To My Moon</h4>
-      </div>
-      <div class="thumbnail"> <a href="#"><img src="images/Sea.jpg" alt="Seahorn" width="2000" class="cards" /></a>
-        <h4>Seahorn</h4>
-      </div>
-    </div>
-    <!-- Footer Section -->
-    <footer id="contact">
+    <footer>
       <p class="hero_header">GET IN TOUCH WITH US</p>
-      <div class="button">
-        <a href="mailto:xyz@gmail.com">EMAIL US </a>
-      </div>
+      <a class="button" href="mailto:hello@example.com">Email us</a>
     </footer>
-    <!-- Copyrights Section -->
-    <div class="copyright">&copy;2022 - <strong>The Tattoo Co.</strong></div>
+    <div class="copyright">&copy; 2022 <strong>The Tattoo Co.</strong>
+      <small>A college HTML5 &amp; CSS3 project for a hypothetical studio.</small>
+    </div>
   </div>
-  <!-- Main Container Ends -->
 </body>
 
 </html>
